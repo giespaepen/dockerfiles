@@ -14,5 +14,5 @@ npm -v
 
 WORKDIR /build
 
-ENTRYPOINT yarn install && yarn test
+ENTRYPOINT yarn install && yarn build && yarn test
 
