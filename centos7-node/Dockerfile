@@ -12,4 +12,4 @@ cd /build
 
 WORKDIR /build
 
-ENTRYPOINT pwd && ls && yarn install && npm rebuild && yarn build && npm test
+ENTRYPOINT pwd && ls && yarn install && npm rebuild && echo "Building env: ${BUILD_ENV}" && yarn build-${BUILD_ENV} && npm test
