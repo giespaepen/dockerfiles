@@ -2,6 +2,19 @@
 
 > I needed some specific Docker containers to build my code in various CI environments. You can find the dockerfiles in this project in order to create an automated build in DockerHub.
 
+## Build a container
+In each dir `<dir>` run the following build command:
+
+```bash
+docker build . -t <reponame>/<dir>:latest
+```
+
+Publish the docker images by:
+
+```bash
+docker push <reponame>/<dir>:latest
+```
+
 ## node-yarn
 
 Simple build container to build an NodeJS project with yarn. The following versions are installed:
