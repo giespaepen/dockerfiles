@@ -1,5 +1,5 @@
 FROM node:7
-MAINTAINER "Gie Spaepen" <gie.spaepen@rombit.be>
+LABEL maintainer="gie.spaepen@rombit.be"
 
 RUN apt-get update && \
 apt-get -y install apt-transport-https curl && \

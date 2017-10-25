@@ -1,5 +1,5 @@
 FROM centos:7
-MAINTAINER "Gie Spaepen" <gie.spaepen@rombit.be>
+LABEL maintainer="gie.spaepen@rombit.be"
 
 RUN yum -y update && yum -y install wget && yum -y install curl && \
 yum -y groupinstall "Development tools" && \
