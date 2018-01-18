@@ -35,6 +35,18 @@ The following actions are run on entry in the `/build` folder:
 - `yarn build`
 - `yarn test`
 
+## hugo-builder
+
+Simple build container to build a hugo site. The main purpose of this build container is to use it in your CI environment. Pull the container and run your code in it like so:
+
+```bash
+docker run -i --name <an image name> -v `pwd`:/build giespaepen/hugo-builder:latest
+```
+
+The following actions are run on entry in the `/build` folder:
+
+- `hugo`
+
 ## centos7-yarn
 
 Simple build container to build an NodeJS project with yarn. The following versions are installed:
