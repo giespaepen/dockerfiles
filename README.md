@@ -67,3 +67,14 @@ The following actions are run on entry in the `/build` folder:
 - `npm rebuild`
 - `yarn build`
 - `npm test`
+
+## postgres-postgis
+
+Simple postgres postgis container. Based on Postgres 9.6 and PostGIS. The purpose of this build container is to use it in your development environment. It runs Postgres 9.6 combined with PostGis 2.3. When you run the container, a new database is created with the PostGIS extension.
+
+```bash
+docker run -i --name postgis -e DB_NAME=<database name> -e DB_USR=<database user> -e DB_PWD=<database pwd> giespaepen/postgres-postgis:latest -d -p 5432:5432
+```
+
+You can connect to the given database on localhost:5432. The default 'test' is used when no environment variables are defined. 
+
